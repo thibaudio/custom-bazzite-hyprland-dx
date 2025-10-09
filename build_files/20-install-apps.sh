@@ -44,9 +44,13 @@ mkdir -p /etc/modules-load.d && cat >>/etc/modules-load.d/ip_tables.conf <<EOF
 iptable_nat
 EOF
 
+dnf copr enable erikreider/SwayNotificationCenter
 dnf5 copr enable solopasha/hyprland
 dnf5 install -y \
   kitty \
   waybar \
   wofi \
+  hyprlock \
+  SwayNotificationCenter \
+  hypridle \
   hyprland
