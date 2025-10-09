@@ -5,8 +5,10 @@
 This is a custom image, forked from [Bazzite DX](https://github.com/ublue-os/bazzite-dx), with the following changes:
 - \- KDE
 - \- VSCode
+- \+ kitty
 - \+ Hyprland
 - \+ Waybar
+- \+ Wofi
 
 ## Installation
 To rebase an existing Bazzite installation to this image, use one of the following commands based on your current variant:

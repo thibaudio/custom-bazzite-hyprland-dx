@@ -48,4 +48,5 @@ dnf5 copr enable solopasha/hyprland
 dnf5 install -y \
   kitty \
   waybar \
+  wofi \
   hyprland
