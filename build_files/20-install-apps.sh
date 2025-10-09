@@ -2,7 +2,8 @@
 set -xeuo pipefail
 
 dnf5 install -y \
-  zsh
+  zsh \
+  SwayNotificationCenter
 
 # Restore UUPD update timer and Input Remapper
 sed -i 's@^NoDisplay=true@NoDisplay=false@' /usr/share/applications/input-remapper-gtk.desktop
@@ -44,13 +45,11 @@ mkdir -p /etc/modules-load.d && cat >>/etc/modules-load.d/ip_tables.conf <<EOF
 iptable_nat
 EOF
 
-dnf copr enable erikreider/SwayNotificationCenter
-dnf5 copr enable solopasha/hyprland
-dnf5 install -y \
+dnf5 copr enable solopasha/hyprland -y
+dnf5 install -y --enable-repo="copr:copr.fedorainfracloud.org:solopasha:hyprland" \
   kitty \
   waybar \
   wofi \
   hyprlock \
-  SwayNotificationCenter \
   hypridle \
   hyprland
