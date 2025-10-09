@@ -43,3 +43,9 @@ dnf5 install -y --enable-repo="docker-ce-stable" "${docker_pkgs[@]}" || {
 mkdir -p /etc/modules-load.d && cat >>/etc/modules-load.d/ip_tables.conf <<EOF
 iptable_nat
 EOF
+
+dnf5 copr enable solopasha/hyprland
+dnf5 install -y \
+  kitty \
+  waybar \
+  hyprland
